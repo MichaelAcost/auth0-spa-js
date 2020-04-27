@@ -383,7 +383,8 @@ export default class Auth0Client {
    */
   public async loginWithRedirect(options: RedirectLoginOptions = {}) {
     const url = await this.buildAuthorizeUrl(options);
-    window.location.assign(url);
+    window.open(url, '_system');
+    // window.location.assign(url);
   }
 
   /**
